@@ -1,6 +1,6 @@
 #include "FBullCowGame.h"
 
-using int32 = int32;
+using int32 = int;
 
 FBullCowGame::FBullCowGame() { reset(); }
 

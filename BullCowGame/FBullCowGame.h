@@ -2,7 +2,7 @@
 #include <string>
 
 using FString = std::string;
-using int32 = int32;
+using int32 = int;
 
 class FBullCowGame {
 public:
