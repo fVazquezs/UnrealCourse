@@ -38,8 +38,12 @@ void playGame() {
 	{
 		Guess = getGuess();//TODO implement the guess validation, make loop checking valid
 
-		//submit the valid guess 
+		//submit the valid guess , receive counts 
+		FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
 		//print number of bulls and cows
+		std::cout << "Bulls: " << BullCowCount.Bulls;
+		std::cout << " .Cows: " << BullCowCount.Cows;
+		std::cout << std::endl;
 
 		printGuess(Guess);
 	}
@@ -50,9 +54,8 @@ void playGame() {
 
 //introduce the game
 void printIntro() {
-	constexpr int32 WORD_LENGTH = 9;
 	std::cout << "Welcome to Bulls and Cows!\n";
-	std::cout << "Can you guess the " << WORD_LENGTH << " isogram that it's in my mind.\n\n";
+	std::cout << "Can you guess the " << BCGame.getHiddenWordLentgh() << " isogram that it's in my mind.\n\n";
 	return;
 }
 
