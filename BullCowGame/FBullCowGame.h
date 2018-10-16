@@ -11,6 +11,14 @@ struct FBullCowCount
 	int32 Cows = 0;
 };
 
+enum class EGuessStatus 
+{
+	OK,
+	Not_Isogram,
+	Wrong_Length,
+	Not_Lowercase
+};
+
 class FBullCowGame {
 public:
 	FBullCowGame(); // my constructor
@@ -22,7 +30,7 @@ public:
 	bool isGameWon() const;
 
 	void reset(); //TODO meka more rich
-	bool checkGuessValidity(FString) const;//TODO make more rich
+	EGuessStatus checkGuessValidity(FString) const;//TODO make more rich
 	FBullCowCount SubmitGuess(FString);
 
 //ignore it for now focus above ^^^^^^^^^^
